@@ -1,4 +1,9 @@
-function FeedbackStats({ feedback }) {
+import { useContext } from "react";
+import FeedbackContext from "../Context/FeedbackContext";
+
+function FeedbackStats() {
+  const { feedback } = useContext(FeedbackContext);
+
   let average =
     feedback.reduce((acc, cur) => {
       return acc + cur.rating;

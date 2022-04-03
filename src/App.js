@@ -30,8 +30,8 @@ function App() {
         <Header />
         <div className="container">
           <FeedbackForm handleAdd={addFeedback} />
-          <FeedbackStats feedback={feedback} />
-          <FeedbackList feedback={feedback} deleteHandle={deleteFeedback} />
+          <FeedbackStats />
+          <FeedbackList deleteHandle={deleteFeedback} />
         </div>
       </FeedbackProvider>
     </>
