@@ -6,6 +6,7 @@ import FeedbackList from "./Components/FeedbackList.jsx";
 import FeedbackData from "./Data/FeedbackData";
 import FeedbackStats from "./Components/FeedbackStats";
 import FeedbackForm from "./Components/FeedbackForm";
+import { FeedbackProvider } from "./Context/FeedbackContext";
 
 import "./Assets/Styles/index.css";
 
@@ -25,12 +26,14 @@ function App() {
 
   return (
     <>
-      <Header />
-      <div className="container">
-        <FeedbackForm handleAdd={addFeedback} />
-        <FeedbackStats feedback={feedback} />
-        <FeedbackList feedback={feedback} deleteHandle={deleteFeedback} />
-      </div>
+      <FeedbackProvider>
+        <Header />
+        <div className="container">
+          <FeedbackForm handleAdd={addFeedback} />
+          <FeedbackStats feedback={feedback} />
+          <FeedbackList feedback={feedback} deleteHandle={deleteFeedback} />
+        </div>
+      </FeedbackProvider>
     </>
   );
 }
