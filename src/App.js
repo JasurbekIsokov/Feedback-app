@@ -1,4 +1,5 @@
 import Header from "./Components/Header";
+import FeedbackItem from "./Components/FeedbackItem.jsx";
 
 import "./Assets/Styles/index.css";
 
@@ -7,7 +8,7 @@ function App() {
     <>
       <Header />
       <div className="container">
-        <h2>My App</h2>
+        <FeedbackItem />
       </div>
     </>
   );
