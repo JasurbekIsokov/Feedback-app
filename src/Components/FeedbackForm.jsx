@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { v4 as uuidv4 } from "uuid";
 
 import Card from "./Shared/Card";
 import Button from "./Shared/Button";
@@ -12,10 +11,10 @@ function FeedbackForm({ handleAdd }) {
   const [rating, setRating] = useState(10);
 
   const handleTextChange = (e) => {
-    if (text === "") {
+    if (text === " ") {
       setBtnDisabled(true);
       setMessage(null);
-    } else if (text !== "" && text.trim().length <= 10) {
+    } else if (text !== " " && text.trim().length <= 10) {
       setMessage("Text must be at least 10 characters");
       setBtnDisabled(true);
     } else {
@@ -35,13 +34,13 @@ function FeedbackForm({ handleAdd }) {
     };
 
     handleAdd(newFeedback);
-
-    setText("");
+    setBtnDisabled(true);
+    setText(" ");
   };
 
   return (
     <Card>
-      <form onClick={handleSubmit}>
+      <form onSubmit={handleSubmit}>
         <h2>How would are rate your dervice with us?</h2>
         <RatingSelect select={(rating) => setRating(rating)} />
         <div className="input-group">
