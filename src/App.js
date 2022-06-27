@@ -13,9 +13,15 @@ function App() {
       <FeedbackProvider>
         <Header />
         <div className="container">
+<<<<<<< HEAD
           <FeedbackForm />
           <FeedbackStats />
           <FeedbackList />
+=======
+          <FeedbackForm handleAdd={addFeedback} />
+          <FeedbackStats />
+          <FeedbackList deleteHandle={deleteFeedback} />
+>>>>>>> ed66bd4817670114fdb8e0766c443844c4fa4c6f
         </div>
       </FeedbackProvider>
     </>

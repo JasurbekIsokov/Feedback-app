@@ -11,6 +11,7 @@ export const FeedbackProvider = ({ children }) => {
       rating: 10,
     },
   ]);
+<<<<<<< HEAD
 
   const addFeedback = (newFeedback) => {
     newFeedback.id = uuidv4();
@@ -23,6 +24,8 @@ export const FeedbackProvider = ({ children }) => {
     }
   };
 
+=======
+>>>>>>> ed66bd4817670114fdb8e0766c443844c4fa4c6f
   return (
     <FeedbackContext.Provider value={{ feedback, deleteFeedback, addFeedback }}>
       {children}

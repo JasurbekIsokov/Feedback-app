@@ -5,7 +5,11 @@ import { motion, AnimatePresence } from "framer-motion";
 import FeedbackItem from "./FeedbackItem";
 import FeedbackContext from "../Context/FeedbackContext";
 
+<<<<<<< HEAD
 function FeedbackList() {
+=======
+function FeedbackList({ deleteHandle }) {
+>>>>>>> ed66bd4817670114fdb8e0766c443844c4fa4c6f
   const { feedback } = useContext(FeedbackContext);
 
   if (!feedback || feedback.length === 0) {
