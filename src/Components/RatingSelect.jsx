@@ -10,6 +10,7 @@ function RatingSelect({ select }) {
     setSelected(feedbackEdit.item.rating);
   }, [feedbackEdit]);
 
+  // baholash uchun ishlayydigan f-ya
   const handleChange = (e) => {
     setSelected(+e.currentTarget.value);
     select(+e.currentTarget.value);

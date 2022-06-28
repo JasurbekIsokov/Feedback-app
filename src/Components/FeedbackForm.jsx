@@ -16,12 +16,13 @@ function FeedbackForm() {
 
   useEffect(() => {
     if (feedbackEdit.edit === true) {
-      setBtnDisabled(false);
-      setText(feedbackEdit.item.text);
-      setRating(feedbackEdit.item.rating);
+      setBtnDisabled(false); // Buttonni bosishga ruhsat
+      setText(feedbackEdit.item.text); // Edit qilinayotgan feedback texti
+      setRating(feedbackEdit.item.rating); // feedbackning rating raqami
     }
   }, [feedbackEdit]);
 
+  // input bosilganda ishlaydigan f-ya
   const handleTextChange = (e) => {
     if (text === " ") {
       setBtnDisabled(true);
@@ -37,6 +38,7 @@ function FeedbackForm() {
     setText(e.target.value);
   };
 
+  // Card bosilganda ishlaydigan f-ya
   const handleSubmit = (e) => {
     e.preventDefault();
 
@@ -51,8 +53,8 @@ function FeedbackForm() {
       addFeedback(newFeedback);
     }
 
-    setBtnDisabled(true);
-    setText("");
+    setBtnDisabled(true); // bo'sh feedbackni saqlamaslik uchun
+    setText(""); // saqalagandan so'ng cardni bo'shatish uchun
   };
 
   return (
