@@ -1,6 +1,6 @@
 import Header from "./Components/Header";
 import FeedbackList from "./Components/FeedbackList.jsx";
-import FeedbackData from "./Data/FeedbackData";
+// import FeedbackData from "./Data/FeedbackData";
 import FeedbackStats from "./Components/FeedbackStats";
 import FeedbackForm from "./Components/FeedbackForm";
 import { FeedbackProvider } from "./Context/FeedbackContext";
